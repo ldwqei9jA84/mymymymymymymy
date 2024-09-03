@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         loadingPage.style.display = 'none'; // Скрыть загрузочную страницу
         mainPage.style.display = 'flex'; // Показать главную страницу
-    }, 2000); // 4000 миллисекунд = 4 секунды
+    }, 6000); // 4000 миллисекунд = 4 секунды
 
     // Load coins and tasks state when the page loads
     loadCoins();
