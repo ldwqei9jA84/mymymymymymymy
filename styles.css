@@ -1,0 +1,300 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:    #46015a;
+    font-family: 'Lobster', cursive; /* Используем необычный шрифт Lobster */
+}
+
+.loading-page {
+    position: fixed; /* Загрузка на весь экран */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Размещаем элементы по вертикали */
+    background-image: url('menu.png'); /* Путь к фоновой картинке */
+    background-size: cover; /* Картинка на весь экран */
+    background-position: center; /* Центрирование фоновой картинки */
+    z-index: 10; /* Поверх всех элементов */
+}
+
+/* Спиннер для анимации загрузки */
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3); /* Легкий белый цвет для границы */
+    border-top: 8px solid #ffffff; /* Белая полоса сверху */
+    border-radius: 50%; /* Круглая форма */
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Анимация вращения */
+    margin-bottom: 20px; /* Отступ снизу для текста */
+}
+
+/* Текст загрузки */
+.loading-text {
+    font-size: 2.5em;
+    color: #ffffff; /* Цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень для читаемости */
+}
+
+/* Ключевые кадры для анимации спиннера */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.main-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff; /* Цвет фона основной страницы */
+    z-index: 1; /* Под загрузочной страницей */
+}
+
+.loading-text {
+    font-size: 2em;
+    color: #ffffff; /* Цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень для читаемости */
+}
+
+.main-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff; /* Цвет фона основной страницы */
+    z-index: 1; /* Под загрузочной страницей */
+}
+button, .task-button {
+    font-family: 'Peace Sans', sans-serif;
+}
+.h11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ddd;
+}
+.h111{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+
+   
+    width: 100%;
+    height: 100%;
+    color: #ddd;
+    
+}
+#coinCount, .task-description, #countdown {
+    font-family: 'Peace Sans', sans-serif;
+}
+
+.main-container, .task-container, .airdrop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("menu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: calc(85vh - 60px); /* Уменьшить высоту контейнера, чтобы не перекрывать футер */
+    max-width: 400px;
+    position: relative; /* Чтобы футер был вне этого контейнера */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1; /* Первая страница выше второй */
+}
+/* Стили для кнопки фарминга */
+#farmButton {
+    position: absolute;
+    bottom: 20px; /* Расположение кнопки фарминга внизу */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px; /* Увеличен размер шрифта для видимости */
+}
+
+.task-container {
+    display: none; /* Скрыть вторую страницу по умолчанию */
+    z-index: 0; /* Вторая страница ниже первой */
+}
+
+   
+.custom-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #ddd;
+}
+
+.text-border {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.text-border::before, .text-border::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #d900ff; /* Фиолетовая граница */
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-border::before {
+    left: 0;
+    right: 0;
+    border-bottom: none;
+}
+
+.text-border::after {
+    left: -10px; /* Отступы для эффекта границы */
+    right: -10px;
+    border-left: none;
+    border-right: none;
+}
+
+.coin-info {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.coin-label {
+    font-size: 1.5rem; /* Размер шрифта для текста "Balance" */
+    color: #ffffff;
+    margin-bottom: 10px; /* Расстояние между текстом и количеством монет */
+}
+
+.coin-count {
+    font-size: 2rem; /* Размер шрифта для количества монет */
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px; /* Расстояние между текстом и количеством монет */
+}
+
+
+
+.farm-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Помещаем кнопку Фарм внизу контейнера */
+}
+
+.farm-button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.farm-button:hover {
+    background-color: #45a049;
+}
+
+.task-list {
+    width: 100%;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.task-description {
+    flex: 1;
+    margin: 0 10px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    color: #ddd;
+}
+
+.task-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-button:hover {
+    background-color: #45a049;
+}
+
+.taskbottom-nav {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Выравнивание иконок по краям */
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+}
+
+.taskbottom-nav img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.taskbottom-nav img:nth-child(1) {
+    margin-left: 0; /* Левая иконка */
+}
+
+.taskbottom-nav img:nth-child(2) {
+    margin: 0 15px; /* Средняя иконка (центральное выравнивание) */
+}
+
+.taskbottom-nav img:nth-child(3) {
+    margin-right: 0; /* Правая иконка */
+}
+
